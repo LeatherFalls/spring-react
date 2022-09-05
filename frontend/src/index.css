@@ -124,18 +124,6 @@ header {
   justify-content: center;
 }
 
-.dsmeta-red-btn {
-  align-items: center;
-  background: rgba(255, 107, 114, 0.1);
-  border: 1px solid #ff6b72;
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  height: 45px;
-  justify-content: center;
-  width: 45px;
-}
-
 .dsmeta-red-btn img {
   width: 19px;
 }
