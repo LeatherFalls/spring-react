@@ -1,10 +1,13 @@
 package com.vinicius.backend.models;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "tb_sales")
+@Data
 public class Sales {
 
     @Id
@@ -18,7 +21,4 @@ public class Sales {
 
     public Sales() {}
 
-    public Long getId() {
-        return id;
-    }
 }
