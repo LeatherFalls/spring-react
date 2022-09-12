@@ -1,5 +1,6 @@
 package com.vinicius.backend.controller;
 
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.vinicius.backend.models.Sales;
 import com.vinicius.backend.service.SaleService;
 import com.vinicius.backend.service.SmsService;
@@ -24,6 +25,7 @@ public class SaleController {
             @RequestParam(value = "minDate", defaultValue = "") String minDate,
             @RequestParam(value = "maxDate", defaultValue = "") String maxDate,
             Pageable pageable) {
+
         return service.findSales(minDate, maxDate, pageable);
     }
 

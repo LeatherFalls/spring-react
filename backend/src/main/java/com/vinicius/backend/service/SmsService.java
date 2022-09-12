@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
 import java.util.Optional;
 
 @Service
@@ -34,8 +35,7 @@ public class SmsService {
 
         String date = sale.getDate().getMonthValue() + "/" + sale.getDate().getYear();
 
-        String msg = "Seller " + sale.getSellerName() + "was featured in " + date
-                +" with a total of R$" + String.format("%.2f", sale.getAmount()) + " billed";
+        String msg = String.format("Seller %s was featured in %s with a total of R$ %.2f billed", sale.getSellerName(), date, sale.getAmount());
 
         Twilio.init(twilioSid, twilioKey);
 
